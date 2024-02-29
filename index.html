@@ -36,8 +36,8 @@
         <script src="data/13FamilyDwellingSaleStormwater_4.js"></script>
         <script>
         var map = L.map('map', {
-            zoomControl:true, maxZoom:28, minZoom:10
-        }).fitBounds([[40.49062873544131,-74.19600927112673],[40.9237304547654,-73.4896715575115]]);
+            zoomControl:true, maxZoom:28, minZoom:9
+        }).fitBounds([[40.612421390158644,-74.03583676068465],[40.78382595703578,-73.75633556780585]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -73,7 +73,7 @@
             pane: 'pane_ESRIGraylight_0',
             opacity: 1.0,
             attribution: '',
-            minZoom: 10,
+            minZoom: 9,
             maxZoom: 28,
             minNativeZoom: 0,
             maxNativeZoom: 20
@@ -117,13 +117,13 @@
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(176,209,232,0.7)',
+                fillColor: 'rgba(176,209,232,0.6)',
                 interactive: false,
             }
         }
         map.createPane('pane_StormSurge2050_1');
         map.getPane('pane_StormSurge2050_1').style.zIndex = 401;
-        map.getPane('pane_StormSurge2050_1').style['mix-blend-mode'] = 'normal';
+        map.getPane('pane_StormSurge2050_1').style['mix-blend-mode'] = 'multiply';
         var layer_StormSurge2050_1 = new L.geoJson(json_StormSurge2050_1, {
             attribution: '',
             interactive: false,
@@ -169,7 +169,7 @@
         }
         map.createPane('pane_ModerateStormwater2050_2');
         map.getPane('pane_ModerateStormwater2050_2').style.zIndex = 402;
-        map.getPane('pane_ModerateStormwater2050_2').style['mix-blend-mode'] = 'normal';
+        map.getPane('pane_ModerateStormwater2050_2').style['mix-blend-mode'] = 'multiply';
         var layer_ModerateStormwater2050_2 = new L.geoJson(json_ModerateStormwater2050_2, {
             attribution: '',
             interactive: false,
@@ -245,7 +245,7 @@
         function style_13FamilyDwellingSaleStormSurge_3_0() {
             return {
                 pane: 'pane_13FamilyDwellingSaleStormSurge_3',
-                radius: 0.6,
+                radius: 1.4,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
@@ -334,7 +334,7 @@
         function style_13FamilyDwellingSaleStormwater_4_0() {
             return {
                 pane: 'pane_13FamilyDwellingSaleStormwater_4',
-                radius: 0.6,
+                radius: 1.4,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
